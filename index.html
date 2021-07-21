@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn-1251216093.file.myqcloud.com/paste/res/icon.ico" type="image/x-icon">
+    <title>CODE PASTE 代码粘贴板</title>
+    <meta name="description" content="开源免费、永久保存的代码粘贴板" />
+    <meta name="keywords" content="CodePaste, 代码粘贴板, 粘贴板, 编程, C/C++" />
+
+    <link rel="stylesheet" href="./src/css/paste.css">
+
+</head>
+
+<body>
+
+    <div id="bookmark-box">
+        <div class="bookmark" style="background-color: #B35C44" onclick="JumpDoc()">C++参考手册</div>
+        <div class="bookmark" style="background-color: #166CB0" onclick="JumpRun()">在线运行代码</div>
+    </div>
+
+    <div id="code-main" style="display: none;">
+
+        <h1 id="title">CODE PASTE</h1>
+
+        <button id="copy-link" class="fun-button" style="display: none;">复制分享链接</button>
+
+        <div id="select-and-submit" style="display: none;">
+
+            <button id="submit" class="fun-button" onclick="pasteCode()">提交</button>
+
+            <select id="language" class="setting-select"></select>
+            <select id="expiration" class="setting-select"></select>
+
+        </div>
+
+        <div id="editor"></div>
+
+    </div>
+
+    <img id="qgroup" src="./res/qgroup.png" alt="Q群二维码" width="135px" onclick="JoinQGroup()">
+
+    <div id="mobile-tips" style="margin: 20px; display: none; "> 拒绝移动设备访问 </div>
+
+    <div id="gz-icp">
+        <a href="https://beian.miit.gov.cn">粤ICP备2021035618号</a>
+    </div>
+
+    <script src="./src/js/ace.js"></script>
+    <script src="./src/js/clipboard.min.js"></script>
+    <script src="./src/js/paste.js"></script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?bdef5ecd8b4bc7bbc8d540746f977571";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <script>
+        init();
+    </script>
+
+</body>
+
+</html>
